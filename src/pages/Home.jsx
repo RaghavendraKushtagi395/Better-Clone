@@ -177,25 +177,26 @@ export default function Home() {
         <br />
         We've got answers
       </h2>
-      <div className="flex gap-3 overflow-x-scroll lg:gap-6 [&::-webkit-scrollbar]:w-0 [&::-webkit-scrollbar]:h-0">
-        {Object.keys(tabs).map((tabKey) => (
-          <button
-            key={tabKey}
-            onClick={() => setTab(tabKey)}
-            className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold transition-all ease-in-out duration-200 border h-12 px-6 py-3 w-auto ${
-              tab === tabKey
-                ? "ring-4 ring-green-600 text-black"
-                : "border-gray-400 hover:ring-green-600 hover:cursor-pointer"
-            }`}
-          >
-            {{
-              OurProduct: 'Our Product',
-              Calculator: 'Calculators',
-              Guides: 'Guides & FAQs'
-            }[tabKey]}
-          </button>
-        ))}
-      </div>
+      <div className="flex gap-3 overflow-x-scroll lg:gap-6 [&::-webkit-scrollbar]:w-0 [&::-webkit-scrollbar]:h-0 p-1">
+  {Object.keys(tabs).map((tabKey) => (
+    <button
+      key={tabKey}
+      onClick={() => setTab(tabKey)}
+      className={`inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-bold transition-all ease-in-out duration-200 border h-12 px-6 py-3 w-auto
+        ${
+          tab === tabKey
+            ? "ring-4 ring-green-600 border-transparent text-black"
+            : "border-gray-400 hover:ring-4 hover:ring-green-600 hover:border-transparent hover:text-black "
+        }`}
+    >
+      {{
+        OurProduct: "Our Product",
+        Calculator: "Calculators",
+        Guides: "Guides & FAQs",
+      }[tabKey]}
+    </button>
+  ))}
+</div>
     </div>
 
     <div className="flex flex-row flex-wrap justify-center gap-8 lg:gap-6">
