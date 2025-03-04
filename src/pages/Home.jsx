@@ -290,6 +290,8 @@ export default function Home() {
       {/* FAQ Section Ends Here  */}
       <BetterFooter/>
 
+      <a href="/about-us" className=" bg-green-600">About</a>
+
     </div>
   );
 }

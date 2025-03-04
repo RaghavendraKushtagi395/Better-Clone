@@ -10,6 +10,7 @@ import AE from '../assets/AmericanExpress.png';
 import BetterFooter from './BetterFooter';
 
 
+
 export default function About() {
     
     const [showVideoModal, setShowVideoModal] = useState(false);
@@ -369,6 +370,7 @@ export default function About() {
       {/* CompanyTime Line Ends here  */}
 
       <BetterFooter />
+
     </div>
   )
 }
